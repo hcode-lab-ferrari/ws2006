@@ -950,6 +950,9 @@ header.page-title hr {
     color: var(--white);
   }
 }
+#home {
+  flex-direction: column;
+}
 #home header {
   width: 100%;
   min-width: 320px;
@@ -1004,7 +1007,151 @@ header.page-title hr {
 #home header ul {
   display: none;
 }
+#home .gallery {
+  flex-direction: column;
+  max-width: 100%;
+}
+#home .gallery figure {
+  position: relative;
+  margin: 0;
+}
+#home .gallery figure picture {
+  width: 100%;
+}
+#home .gallery figure picture img {
+  width: 100%;
+}
+#home .gallery figure figcaption {
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  background-color: var(--dark-1);
+  color: var(--white);
+  padding: 8px 29px 10px 26px;
+  height: 72px;
+  width: 180px;
+}
+#home .gallery figure figcaption h2 {
+  font-size: 1.5em;
+  margin: 0;
+  width: fit-content;
+}
+#home .gallery figure figcaption p {
+  font-size: 1em;
+  margin: 0;
+  width: fit-content;
+  color: var(--gray-3);
+}
+#home .services {
+  flex-direction: column;
+  padding: var(--space);
+  padding-bottom: 60vw;
+  background-image: url("/assets/images/services.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+#home .services h2 {
+  font-size: 1.75em;
+  color: var(--gray-11);
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#home .services > p {
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gray-9);
+  margin: 0;
+  margin-bottom: 20px;
+}
+#home .services .services_wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+#home .services .services_wrapper ul {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  align-items: center;
+}
+#home .services .services_wrapper ul li {
+  flex-direction: column;
+  text-transform: normal;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+#home .services .services_wrapper ul li figure {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+#home .services .services_wrapper ul li figure img {
+  width: 100%;
+}
+#home .services .services_wrapper ul li p {
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--gray-9);
+  margin: 0;
+  width: fit-content;
+}
+#home .services .services_wrapper a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+  width: 100%;
+}
+#home .services .services_wrapper a:hover {
+  background-color: var(--black-10);
+}
+#home .services .services_wrapper a:active {
+  background-color: var(--black-75);
+}
+#home .services .services_wrapper a:hover {
+  background-color: var(--green-hover);
+}
+#home .services .services_wrapper a:active {
+  background-color: var(--green-active);
+}
 
+@media (min-width: 900px) {
+  #home .gallery {
+    flex-direction: row;
+  }
+  #home .services .services_wrapper {
+    flex-direction: column-reverse;
+  }
+  #home .services .services_wrapper ul {
+    width: 60vw;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #home .services .services_wrapper a {
+    width: 200px;
+    margin-bottom: 118px;
+  }
+}
 @media (min-width: 1200px) {
   #home header {
     background-image: url("/assets/images/ferrari-vermelha.webp");
