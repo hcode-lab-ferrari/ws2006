@@ -351,9 +351,7 @@
       }
     }
   }
-}
 
-@media (min-width: 1200px) {
   #home {
     >header {
       background-image: url('/assets/images/ferrari-vermelha.webp');
@@ -384,7 +382,7 @@
 
 @media (min-width: 1920px) {
   #home {
-    header {
+    > header {
       background-image: url('/assets/images/ferrari-vermelha@2x.webp');
     }
   }
