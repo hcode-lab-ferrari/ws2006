@@ -953,7 +953,7 @@ header.page-title hr {
 #home {
   flex-direction: column;
 }
-#home header {
+#home > header {
   width: 100%;
   min-width: 320px;
   min-height: calc(100vh - 60px);
@@ -967,7 +967,7 @@ header.page-title hr {
   align-items: flex-end;
   padding: 2em;
 }
-#home header a {
+#home > header a {
   min-width: 130px;
   border: none;
   height: 50px;
@@ -986,17 +986,17 @@ header.page-title hr {
   color: var(--white);
   border: var(--white) 2px solid;
 }
-#home header a:hover {
+#home > header a:hover {
   background-color: var(--black-10);
 }
-#home header a:active {
+#home > header a:active {
   background-color: var(--black-75);
 }
-#home header a:hover {
+#home > header a:hover {
   background-color: var(--white);
   color: var(--black);
 }
-#home header h1 {
+#home > header h1 {
   color: var(--white);
   font-size: 4em;
   font-weight: bold;
@@ -1004,7 +1004,7 @@ header.page-title hr {
   line-height: 1.25em;
   margin: 0.4em 0;
 }
-#home header ul {
+#home > header ul {
   display: none;
 }
 #home .gallery {
@@ -1045,7 +1045,7 @@ header.page-title hr {
 #home .services {
   flex-direction: column;
   padding: var(--space);
-  padding-bottom: 60vw;
+  padding-bottom: calc(60vw - 10%);
   background-image: url("/assets/images/services.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -1133,8 +1133,108 @@ header.page-title hr {
 #home .services .services_wrapper a:active {
   background-color: var(--green-active);
 }
+#home .contact {
+  width: 100%;
+  flex-direction: column;
+}
+#home .contact h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--dark-0);
+  margin: 20px var(--space);
+}
+#home .contact section {
+  flex-direction: column;
+}
+#home .contact section form {
+  margin-bottom: 20px;
+}
+#home .contact section form header {
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#home .contact section form header h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--green);
+  margin: 0;
+  margin-bottom: 7px;
+}
+#home .contact section form header hr {
+  border: 0;
+  margin: 0;
+  width: 68px;
+  height: 4px;
+  background-color: var(--red);
+}
+#home .contact section form .alert {
+  width: 100%;
+  padding: 14px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+#home .contact section form .alert.danger {
+  background-color: var(--danger);
+  color: var(--danger-color);
+  border: 1px solid var(--danger-border);
+}
+#home .contact section form .alert.success {
+  background-color: var(--success);
+  color: var(--success-color);
+  border: 1px solid var(--success-border);
+}
+#home .contact section form .actions {
+  width: 100%;
+  justify-content: flex-end;
+}
+#home .contact section form .actions button {
+  width: 100%;
+}
+#home .contact section #map {
+  width: 100%;
+  height: 30vh;
+  background-image: url("/assets/images/mapa.png");
+  margin-bottom: 20px;
+}
+#home .contact .contacts {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  padding: 0 var(--space);
+}
+#home .contact .contacts li {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--gray-1);
+  padding: 40px;
+}
+#home .contact .contacts li img {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -60px;
+  background: linear-gradient(#FFF, #FFF);
+}
+#home .contact .contacts li p {
+  margin: 0;
+  color: var(--gray-0);
+  font-size: 1.7em;
+  width: fit-content;
+}
+#home .contact .contacts li .title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   #home .gallery {
     flex-direction: row;
   }
@@ -1151,23 +1251,64 @@ header.page-title hr {
     width: 200px;
     margin-bottom: 118px;
   }
+  #home .contact {
+    padding: 0 var(--space);
+  }
+  #home .contact h2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #home .contact section {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #home .contact section form {
+    min-width: 50%;
+    margin-right: 100px;
+    padding: 0;
+  }
+  #home .contact section form .actions button {
+    width: 200px;
+  }
+  #home .contact section #map {
+    width: 50%;
+    background-image: url("/assets/images/mapa@2x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 30vw;
+  }
+  #home .contact .contacts {
+    flex-direction: row;
+  }
+  #home .contact .contacts li {
+    width: 100%;
+    margin-right: 20px;
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  #home .contact .contacts li .title {
+    font-size: 1.4em;
+  }
 }
 @media (min-width: 1200px) {
-  #home header {
+  #home > header {
     background-image: url("/assets/images/ferrari-vermelha.webp");
   }
-  #home header a {
+  #home > header a {
     margin-bottom: 50px;
   }
-  #home header h1 {
+  #home > header h1 {
     margin-top: 40px;
   }
-  #home header ul {
+  #home > header ul {
     display: flex;
     color: var(--white);
     margin: 0;
   }
-  #home header ul li {
+  #home > header ul li {
     font-size: 30px;
     height: 30px;
     line-height: 30px;
