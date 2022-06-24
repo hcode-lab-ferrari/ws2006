@@ -1367,4 +1367,217 @@ header.page-title hr {
   color: var(--white);
 }
 
+@media (min-width: 992px) {
+  #time-options.page form {
+    min-width: 900px;
+  }
+  #time-options .options {
+    justify-content: flex-start;
+  }
+  #time-options .options label {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+  }
+  #time-options h3 {
+    font-size: 1.4em;
+  }
+}
+.page .options {
+  margin-top: 20px;
+  flex-direction: column;
+}
+.page .options label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+.page .options label .square {
+  width: 24px;
+  height: 24px;
+  border: var(--gray-10) 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+.page .options label .square > div {
+  width: 14px;
+  height: 14px;
+  background-color: var(--gray-10);
+  opacity: 0.5;
+  transition: all 0.1s ease-in-out;
+}
+.page .options label:hover .square {
+  border: var(--gray-8) 2px solid;
+}
+.page .options label:hover > div {
+  opacity: 1;
+}
+.page .options label input {
+  display: none;
+}
+.page .options label input:checked + .square > div {
+  opacity: 1;
+  background: var(--blue);
+}
+.page .options label .content {
+  flex-direction: column;
+  padding-left: 12px;
+  z-index: 2;
+  color: var(--dark-0);
+  line-height: 1.5em;
+}
+.page .options label .content span {
+  width: fit-content;
+}
+.page .options label .content .description {
+  font-size: 0.9em;
+  color: var(--gray-2);
+}
+.page .options label .content .price {
+  font-weight: bold;
+}
+.page aside {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  bottom: 80px;
+  height: 50px;
+  background-color: var(--gray-12);
+  border-bottom: 1px solid var(--gray-3);
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+.page aside header {
+  display: none;
+  font-size: 2em;
+  height: 130px;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-0);
+}
+.page aside section {
+  padding: 0 20px;
+  display: none;
+  flex: 1;
+  max-height: calc(100vh - 338px);
+  overflow: auto;
+  align-items: flex-start;
+}
+.page aside section table {
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: var(--gray-3) 1px solid;
+}
+.page aside section table .price {
+  text-align: right;
+}
+.page aside section table tr {
+  border-top: var(--gray-3) solid 1px;
+}
+.page aside section table tr td {
+  padding: 20px 0;
+}
+.page aside section table tr td.image {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page aside footer {
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.1em;
+}
+.page aside footer .total {
+  font-weight: bold;
+  margin-left: 20px;
+  text-align: right;
+}
+.page aside footer button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  min-width: 50px;
+  width: 50px;
+}
+.page aside footer button:hover {
+  background-color: var(--black-10);
+}
+.page aside footer button:active {
+  background-color: var(--black-75);
+}
+.page aside footer button svg {
+  transform: rotate(0deg);
+  transition: all 0.2s ease-in-out;
+}
+.page aside.open {
+  height: calc(100vh - 158px);
+}
+.page aside.open header,
+.page aside.open section {
+  display: flex;
+}
+.page aside.open footer button svg {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1200px) {
+  #schedules-services > header,
+#schedules-services > main {
+    width: calc(100vw - 375px);
+  }
+  #schedules-services aside,
+#schedules-services aside.open {
+    width: 375px;
+    height: calc(100vh - 118px);
+    bottom: 0;
+    z-index: 4;
+  }
+  #schedules-services aside header,
+#schedules-services aside section,
+#schedules-services aside.open header,
+#schedules-services aside.open section {
+    display: flex;
+  }
+  #schedules-services aside header,
+#schedules-services aside.open header {
+    height: 160px;
+  }
+  #schedules-services aside footer,
+#schedules-services aside.open footer {
+    height: 80px;
+  }
+  #schedules-services aside footer > div,
+#schedules-services aside.open footer > div {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+  }
+  #schedules-services aside footer > div .total,
+#schedules-services aside.open footer > div .total {
+    font-size: 1.5rem;
+  }
+  #schedules-services aside footer button,
+#schedules-services aside.open footer button {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
