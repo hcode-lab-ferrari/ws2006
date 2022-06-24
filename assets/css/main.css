@@ -260,7 +260,7 @@ form button:active {
 header.page-title {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
@@ -456,6 +456,9 @@ header.page-title hr {
 }
 
 @media (min-width: 1200px) {
+  header.page-title {
+    align-items: flex-start;
+  }
   .page > header {
     justify-content: flex-start;
     padding-left: 185px;
@@ -1577,6 +1580,39 @@ header.page-title hr {
   #schedules-services aside footer button,
 #schedules-services aside.open footer button {
     display: none;
+  }
+}
+#change-photo form {
+  display: flex;
+  align-items: center;
+}
+#change-photo form #photo-preview {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+#change-photo form #file {
+  display: none;
+}
+#change-photo form .choose-photo {
+  margin: 28px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 1200px) {
+  #change-photo form {
+    align-items: flex-start;
+  }
+  #change-photo form .choose-photo {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  #change-password form header {
+    margin: var(--space) 0;
+    width: 100%;
   }
 }
 
