@@ -1713,6 +1713,9 @@ header.page-title hr {
   justify-content: center;
   align-items: center;
 }
+#auth .hide {
+  display: none;
+}
 #auth > section {
   flex-direction: column;
   align-items: center;
@@ -1733,6 +1736,24 @@ header.page-title hr {
 #auth > section form {
   margin-top: 220px;
 }
+#auth > section form .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#auth > section form .message img {
+  margin-right: 12px;
+}
+#auth > section form .message span {
+  font-weight: bold;
+  color: var(--dark-0);
+}
+#auth > section form#forget .actions {
+  justify-content: center;
+}
+#auth > section form#reset .actions {
+  justify-content: flex-end;
+}
 #auth > section form h1 {
   color: var(--green);
   font-size: 2em;
@@ -1748,6 +1769,15 @@ header.page-title hr {
 #auth > section form .actions {
   justify-content: space-between;
   align-items: center;
+}
+#auth > section form .actions > div {
+  flex-direction: column;
+}
+#auth > section form .actions > div a {
+  display: flex;
+}
+#auth > section form .actions > div a:first-child {
+  margin-bottom: 50px;
 }
 #auth > section form .actions .link {
   color: var(--dark-0);
